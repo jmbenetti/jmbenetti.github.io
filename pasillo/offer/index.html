@@ -7,36 +7,108 @@
     <meta property="og:title" content="Oferta de Trabajo - Pasillo Docente">
     <meta property="og:description" content="Revisá esta oferta de trabajo para docentes. Abrí la app para ver detalles y postularte.">
     <meta property="og:type" content="website">
+    <meta property="og:image" content="https://jmbenetti.github.io/img/logopasillo.jpg">
     
     <title>Pasillo Docente - Oferta</title>
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; text-align: center; padding: 40px 20px; background: #f0f2f5; color: #1c1e21; }
-        .card { background: white; padding: 40px; border-radius: 20px; box-shadow: 0 8px 24px rgba(0,0,0,0.1); display: inline-block; max-width: 400px; width: 100%; }
-        h1 { color: #1565C0; margin-bottom: 10px; }
-        p { font-size: 16px; color: #606770; line-height: 1.5; margin-bottom: 30px; }
-        .btn { background: #2196F3; color: white; padding: 16px 32px; text-decoration: none; border-radius: 50px; font-weight: bold; display: block; font-size: 16px; transition: background 0.3s; }
-        .btn:hover { background: #1976D2; }
-        .footer { margin-top: 20px; font-size: 12px; color: #90949c; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
+            text-align: center; 
+            padding: 20px; 
+            background: #e3f2fd; 
+            color: #1c1e21; 
+            margin: 0; 
+        }
+        .card { 
+            background: white; 
+            padding: 30px; 
+            border-radius: 20px; 
+            box-shadow: 0 8px 24px rgba(0,0,0,0.1); 
+            display: inline-block; 
+            max-width: 500px; 
+            width: 100%; 
+            box-sizing: border-box;
+            vertical-align: middle;
+        }
+        .logo { 
+            width: 100px; 
+            height: 100px; 
+            border-radius: 18px; 
+            margin-bottom: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .banner { 
+            width: 100%; 
+            height: auto;
+            border-radius: 12px; 
+            margin: 20px 0; 
+            display: block; 
+            border: 1px solid #eee;
+        }
+        h1 { 
+            color: #1565C0; 
+            margin: 0 0 10px 0; 
+            font-size: 26px; 
+        }
+        p { 
+            font-size: 16px; 
+            color: #444; 
+            line-height: 1.5; 
+            margin-bottom: 20px; 
+        }
+        .btn { 
+            background: #2196F3; 
+            color: white; 
+            padding: 18px 32px; 
+            text-decoration: none; 
+            border-radius: 50px; 
+            font-weight: bold; 
+            display: block; 
+            font-size: 18px; 
+            transition: background 0.3s; 
+            margin-top: 10px;
+        }
+        .btn:hover { 
+            background: #1976D2; 
+        }
+        .footer { 
+            margin-top: 25px; 
+            font-size: 13px; 
+            color: #666; 
+            line-height: 1.4;
+        }
+        b { color: #1565C0; }
     </style>
 </head>
 <body>
+    <div style="height: 40px;"></div> <!-- Espaciador superior -->
+    
     <div class="card">
-        <h1>Pasillo Docente</h1>
-        <p>Te compartieron una oferta de trabajo.<br><br>Para ver los detalles completos del IGE y postularte, necesitás tener instalada la aplicación.</p>
+        <!-- Logo Principal -->
+        <img src="https://jmbenetti.github.io/img/logopasillo.jpg" alt="Logo Pasillo Docente" class="logo">
         
-        <!-- Enlace a la Play Store -->
-        <a href="https://play.google.com/store/apps/details?id=com.example.abcdapp" class="btn">INSTALAR PARA VER OFERTA</a>
+        <h1>Pasillo Docente</h1>
+        
+        <p>Te compartieron una oferta de trabajo específica.<br><br>
+        Para ver los detalles completos del IGE y postularte, <b>necesitás</b> tener instalada la aplicación.</p>
+        
+        <!-- Imagen de Funciones/Preview -->
+        <img src="https://jmbenetti.github.io/img/funciones.png" alt="Pasillo Docente: Tu gestión más fácil" class="banner">
+        
+        <!-- Botón de Acción -->
+        <a href="https://play.google.com/store/apps/details?id=com.example.abcdapp" class="btn">INSTALÁ LA APP PARA VER LA OFERTA</a>
         
         <div class="footer">
-            Si ya tenés la app instalada y ves esta página, <br>asegurate de abrir el link con Pasillo Docente.
+            Si ya tenés la app instalada y ves esta página,<br>
+            aseguráte de abrir el link con <b>Pasillo Docente</b>.
         </div>
     </div>
 
     <script>
-        // Opcional: Podrías intentar una redirección automática a la Playstore
+        // Captura del IGE por si querés hacer algo más adelante con JS
         const urlParams = new URLSearchParams(window.location.search);
         const ige = urlParams.get('ige');
-        console.log("IGE detectado:", ige);
+        if(ige) console.log("IGE para mostrar:", ige);
     </script>
 </body>
 </html>
