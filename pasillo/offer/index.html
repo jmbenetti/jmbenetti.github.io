@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Meta tags para vista previa en WhatsApp -->
+    <meta property="og:title" content="Oferta de Trabajo - Pasillo Docente">
+    <meta property="og:description" content="Revisá esta oferta de trabajo para docentes. Abrí la app para ver detalles y postularte.">
+    <meta property="og:type" content="website">
+    
+    <title>Pasillo Docente - Oferta</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; text-align: center; padding: 40px 20px; background: #f0f2f5; color: #1c1e21; }
+        .card { background: white; padding: 40px; border-radius: 20px; box-shadow: 0 8px 24px rgba(0,0,0,0.1); display: inline-block; max-width: 400px; width: 100%; }
+        h1 { color: #1565C0; margin-bottom: 10px; }
+        p { font-size: 16px; color: #606770; line-height: 1.5; margin-bottom: 30px; }
+        .btn { background: #2196F3; color: white; padding: 16px 32px; text-decoration: none; border-radius: 50px; font-weight: bold; display: block; font-size: 16px; transition: background 0.3s; }
+        .btn:hover { background: #1976D2; }
+        .footer { margin-top: 20px; font-size: 12px; color: #90949c; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>Pasillo Docente</h1>
+        <p>Te compartieron una oferta de trabajo.<br><br>Para ver los detalles completos del IGE y postularte, necesitás tener instalada la aplicación.</p>
+        
+        <!-- Enlace a la Play Store -->
+        <a href="https://play.google.com/store/apps/details?id=com.example.abcdapp" class="btn">INSTALAR PARA VER OFERTA</a>
+        
+        <div class="footer">
+            Si ya tenés la app instalada y ves esta página, <br>asegurate de abrir el link con Pasillo Docente.
+        </div>
+    </div>
+
+    <script>
+        // Opcional: Podrías intentar una redirección automática a la Playstore
+        const urlParams = new URLSearchParams(window.location.search);
+        const ige = urlParams.get('ige');
+        console.log("IGE detectado:", ige);
+    </script>
+</body>
+</html>
