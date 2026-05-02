@@ -2,7 +2,7 @@
   "relation": ["delegate_permission/common.handle_all_urls"],
   "target": {
     "namespace": "android_app",
-    "package_name": "com.example.abcdapp",
+    "package_name": "com.jmbenetti.pasillodocente",
     "sha256_cert_fingerprints": ["18:71:8F:1F:BC:EB:79:47:B0:F9:40:6F:A9:57:3E:E6:76:3E:99:2B:66:77:C8:BC:4B:F2:DF:E4:83:C4:45:9F"]
   }
 }]
