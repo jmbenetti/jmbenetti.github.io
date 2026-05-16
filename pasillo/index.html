@@ -4,98 +4,165 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <!-- Meta tags para vista previa en redes sociales -->
-    <meta property="og:title" content="Bienvenidos a Pasillo Docente">
-    <meta property="og:description" content="La comunidad definitiva para docentes de PBA. Descargá la app y accedé a ofertas y herramientas.">
+    <meta property="og:title" content="Pasillo Docente - App para Docentes de PBA">
+    <meta property="og:description" content="Encontrá cargos, recibí notificaciones personalizadas y organizá tus horarios en un solo lugar.">
     <meta property="og:type" content="website">
     <meta property="og:image" content="../img/logopasillo.jpg">
     
-    <title>Bienvenidos - Pasillo Docente</title>
+    <title>Pasillo Docente - Tu futuro cargo está acá</title>
     <style>
+        :root {
+            --primary-color: #1565C0;
+            --accent-color: #2196F3;
+            --bg-color: #e3f2fd;
+            --text-main: #333;
+            --text-secondary: #555;
+        }
+
         * { box-sizing: border-box; }
         body { 
-            font-family: -apple-system, system-ui, sans-serif; 
-            background: #e3f2fd; 
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
+            background: var(--bg-color); 
             margin: 0; 
             display: flex;
             align-items: center;
             justify-content: center;
             min-height: 100dvh; 
-            padding: 15px;
+            padding: 20px;
         }
         .card { 
             background: white; 
-            padding: 25px 20px; 
-            border-radius: 16px; 
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
-            max-width: 380px; 
+            padding: 30px 25px; 
+            border-radius: 24px; 
+            box-shadow: 0 10px 30px rgba(21, 101, 192, 0.15); 
+            max-width: 450px; 
             width: 100%; 
             text-align: center;
         }
         .logo { 
-            width: 75px; 
-            height: 75px; 
-            border-radius: 16px; 
-            margin-bottom: 12px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            width: 80px; 
+            height: 80px; 
+            border-radius: 18px; 
+            margin-bottom: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
         h1 { 
-            color: #1565C0; 
-            margin: 0 0 8px 0; 
-            font-size: 22px; 
+            color: var(--primary-color); 
+            margin: 0 0 10px 0; 
+            font-size: 26px; 
+            font-weight: 800;
         }
-        p { 
-            font-size: 14px; 
-            color: #444; 
-            line-height: 1.4; 
-            margin: 0 0 15px 0; 
+        .tagline { 
+            font-size: 16px; 
+            color: var(--text-main); 
+            line-height: 1.5; 
+            margin: 0 0 20px 0;
+            font-weight: 500;
         }
+        
+        /* Sección de Características - Basado en los filtros de tu App */
+        .features {
+            text-align: left;
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 12px;
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+        .feature-item:last-child { margin-bottom: 0; }
+        .feature-icon {
+            color: var(--primary-color);
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
         .banner { 
             width: 100%; 
-            max-height: 150px; 
-            object-fit: contain;
-            border-radius: 8px; 
-            margin-bottom: 15px;
-            background: #f8f9fa;
+            height: auto;
+            border-radius: 12px; 
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        
+        .cta-section {
+            margin-top: 25px;
         }
         .instruction {
-            font-weight: bold;
-            color: #1565C0;
-            font-size: 14px;
-            margin-bottom: 5px;
+            font-weight: 700;
+            color: var(--primary-color);
+            font-size: 15px;
+            margin-bottom: 12px;
+            display: block;
         }
         .play-store-img {
-            height: 55px;
-            transition: transform 0.2s;
+            height: 60px;
+            transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .play-store-img:hover {
+            transform: scale(1.05);
         }
         .play-store-img:active {
             transform: scale(0.95);
         }
+        
         .footer { 
-            margin-top: 15px; 
-            font-size: 11px; 
-            color: #777; 
-            line-height: 1.3;
+            margin-top: 25px; 
+            font-size: 12px; 
+            color: #888; 
+            border-top: 1px solid #eee;
+            padding-top: 15px;
         }
-        b { color: #1565C0; }
+        
+        @media (max-width: 400px) {
+            .card { padding: 25px 15px; }
+            h1 { font-size: 22px; }
+            .tagline { font-size: 14px; }
+        }
     </style>
 </head>
 <body>
     <div class="card">
         <img src="../img/logopasillo.jpg" alt="Logo Pasillo Docente" class="logo">
-        <h1>¡Te damos la bienvenida!</h1>
-        <p>Descubrí la forma más fácil de encontrar ofertas de trabajo docente en PBA.</p>
+        <h1>Pasillo Docente</h1>
+        <p class="tagline">La app indispensable para el docente de la Provincia de Buenos Aires.</p>
         
-        <img src="../img/funciones.png" alt="Funciones de la App" class="banner">
+        <div class="features">
+            <div class="feature-item">
+                <span class="feature-icon">✓</span>
+                <span><b>Notificaciones al instante:</b> Enterate antes que nadie cuando sale un cargo en tus distritos favoritos.</span>
+            </div>
+            <div class="feature-item">
+                <span class="feature-icon">✓</span>
+                <span><b>Búsqueda Avanzada:</b> Filtrá por Área, Modalidad o directamente por IGE.</span>
+            </div>
+            <div class="feature-item">
+                <span class="feature-icon">✓</span>
+                <span><b>Compatibilidad Horaria:</b> Encontrá ofertas que no se superpongan con tus otros cargos.</span>
+            </div>
+            <div class="feature-item">
+                <span class="feature-icon">✓</span>
+                <span><b>Mapa de Escuelas:</b> Ubicá los establecimientos y planificá tu viaje al instante.</span>
+            </div>
+        </div>
+
+        <img src="../img/funciones.png" alt="Vista previa de Pasillo Docente" class="banner">
         
-        <p class="instruction">Instalá la app para empezar:</p>
-        <a href="https://play.google.com/store/apps/details?id=com.jmbenetti.pasillodocente&hl=es_AR">
-            <img src="../img/googleplay.png" alt="Disponible en Google Play" class="play-store-img">
-        </a>
+        <div class="cta-section">
+            <span class="instruction">¡Descargala ahora y tomá tu próximo cargo!</span>
+            <a href="https://play.google.com/store/apps/details?id=com.jmbenetti.pasillodocente&hl=es_AR">
+                <img src="../img/googleplay.png" alt="Descargar en Google Play" class="play-store-img">
+            </a>
+        </div>
         
         <div class="footer">
-            Abrí la app en tu dispositivo para continuar.
+            Optimizada para la búsqueda rápida en el portal de la App ABC.
         </div>
     </div>
 </body>
 </html>
-
